@@ -6,7 +6,7 @@
 (() => {
   "use strict";
 
-  const WHATSAPP_NUMBER = "";
+  const WHATSAPP_NUMBER = "6283877660960";
 
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("nav-menu");

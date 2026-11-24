@@ -1,21 +1,34 @@
-/* CRUMBLE & CO. — interactive features
-   Isi nomor WhatsApp pada WHATSAPP_NUMBER sebelum menerima pesanan.
-   Format: kode negara + nomor, tanpa tanda +, spasi, atau strip.
-   Contoh format Indonesia: 62812XXXXXXXX
-*/
+
+/* CRUMBLE & CO. — interactive features */
 (() => {
   "use strict";
 
+  // Nomor WhatsApp CRUMBLE & CO.
   const WHATSAPP_NUMBER = "6283877660960";
 
+  // Harga produk
+  const productPrices = {
+    "Choco Chip Cookies": "Rp25.000",
+    "Fudgy Brownies Bites": "Rp30.000",
+    "Premium Nastar": "Rp35.000",
+    "Crispy Cheese Stick": "Rp20.000",
+    "Sweet Palmier": "Rp22.000"
+  };
+
+  // MOBILE MENU
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.getElementById("nav-menu");
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
       const isOpen = navMenu.classList.toggle("active");
+
       menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute("aria-label", isOpen ? "Tutup menu" : "Buka menu");
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Tutup menu" : "Buka menu"
+      );
+
       menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
@@ -29,12 +42,14 @@
     });
   }
 
+  // PRODUCT FILTER
   const filterButtons = document.querySelectorAll(".filter-btn");
   const productCards = document.querySelectorAll(".product-card");
 
   filterButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const filter = button.dataset.filter || "all";
+
       filterButtons.forEach((item) => {
         const selected = item === button;
         item.classList.toggle("active", selected);
@@ -42,34 +57,63 @@
       });
 
       productCards.forEach((card) => {
-        const matches = filter === "all" || card.dataset.category === filter;
+        const matches =
+          filter === "all" ||
+          card.dataset.category === filter;
+
         card.hidden = !matches;
       });
     });
-    button.setAttribute("aria-pressed", String(button.classList.contains("active")));
+
+    button.setAttribute(
+      "aria-pressed",
+      String(button.classList.contains("active"))
+    );
   });
 
+  // WHATSAPP ORDER
   document.querySelectorAll(".order-btn").forEach((button) => {
     button.addEventListener("click", () => {
-      const product = button.dataset.product || "produk Crumble & Co.";
-      if (!/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
-        alert("Nomor WhatsApp toko belum diatur. Silakan isi WHATSAPP_NUMBER di file script.js terlebih dahulu.");
-        return;
-      }
-      const message = `Halo Crumble & Co., saya ingin memesan ${product}. Mohon informasi ketersediaan dan cara pemesanannya.`;
-      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank", "noopener,noreferrer");
+      const product =
+        button.dataset.product || "produk Crumble & Co.";
+
+      const price = productPrices[product] || "";
+
+      const message =
+        `Halo Crumble & Co., saya ingin memesan:\n\n` +
+        `Produk: ${product}\n` +
+        `Harga: ${price}\n\n` +
+        `Mohon informasi ketersediaan dan cara pemesanan. Terima kasih.`;
+
+      const whatsappURL =
+        `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
     });
   });
 
-  // Jangan arahkan pengunjung ke tautan kosong (#).
-  ["tiktok-link", "instagram-link"].forEach((id) => {
-    const link = document.getElementById(id);
-    if (link && (!link.getAttribute("href") || link.getAttribute("href") === "#")) {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        alert("Tautan media sosial belum diatur. Tambahkan URL akun toko pada index.html.");
-      });
-    }
-  });
+  // WHATSAPP CONTACT BUTTON
+  const contactButtons = document.querySelector(".contact-buttons");
+
+  if (contactButtons) {
+    const whatsappButton = document.createElement("a");
+
+    whatsappButton.href = `https://wa.me/${WHATSAPP_NUMBER}`;
+    whatsappButton.className = "btn btn-primary";
+    whatsappButton.target = "_blank";
+    whatsappButton.rel = "noopener noreferrer";
+    whatsappButton.textContent = "Pesan via WhatsApp";
+
+    contactButtons.appendChild(whatsappButton);
+  }
+
+  // TIKTOK
+  const tiktokLink = document.getElementById("tiktok-link");
+
+  if (tiktokLink) {
+    tiktokLink.href = "https://www.tiktok.com/@crumbleco01";
+    tiktokLink.target = "_blank";
+    tiktokLink.rel = "noopener noreferrer";
+  }
+
 })();

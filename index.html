@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Crumble & Co. - Homemade bakery, cookies, brownies, dan camilan premium. Freshly Baked, Happiness in Every Bite.">
+    <meta name="description" content="Crumble & Co. - Toko roti rumahan yang menyediakan kukis, brownies, dan camilan lezat.">
 
-    <title>Crumble & Co. | Bakery & Cookies</title>
+    <title>Crumble & Co. | Toko Roti dan Kue</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
         <nav class="navbar container">
 
             <a href="#home" class="logo">
-                CRUMBLE <span>& CO.</span>
+                <img src="images/logo-crumble.png" alt="Logo Crumble &amp; Co.">
             </a>
 
             <button class="menu-toggle" id="menu-toggle"
@@ -35,14 +35,14 @@
             </button>
 
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#contact">Kontak</a></li>
             </ul>
 
-            <a href="#products" class="nav-button">Explore Menu</a>
+            <a href="#products" class="nav-button">Lihat Menu</a>
 
         </nav>
     </header>
@@ -56,35 +56,33 @@
 
             <div class="hero-text">
 
-                <p class="eyebrow">WELCOME TO CRUMBLE & CO.</p>
+                <p class="eyebrow">SELAMAT DATANG DI CRUMBLE & CO.</p>
 
                 <h1>
-                    Freshly Baked,
-                    <span>Happiness</span>
-                    in Every Bite.
+                    Dipanggang dengan  <span>Cinta</span>,
+                    <span>Kebahagiaan</span>
+                    di Setiap Gigitan
                 </h1>
 
                 <p class="hero-description">
-                    Discover the joy of homemade bakery.
-                    Fresh ingredients, delightful flavors,
-                    and little moments of happiness in every bite.
+                    Temukan kebahagiaan dari aneka kue rumahan. Dibuat dengan bahan-bahan segar, cita rasa yang istimewa, dan menghadirkan momen-momen kecil penuh kebahagiaan di setiap gigitan
                 </p>
 
                 <div class="hero-buttons">
                     <a href="#products" class="btn btn-primary">
-                        Explore Our Products
+                        Jelajahi Produk Kami
                     </a>
 
                     <a href="#about" class="btn btn-outline">
-                        Discover Our Story
+                        Kenali Cerita Kami
                     </a>
                 </div>
 
             </div>
 
             <div class="hero-image">
-                <img loading="lazy" src="images/hero.jpeg"
-                     alt="Freshly baked cookies Crumble and Co.">
+                <img fetchpriority="high" src="images/hero.jpeg"
+                     alt="Kukis Crumble & Co. yang baru dipanggang">
             </div>
 
         </div>
@@ -99,22 +97,21 @@
 
             <div class="about-image">
                 <img loading="lazy" src="images/about.jpeg"
-                     alt="Homemade bakery preparation">
+                     alt="Proses pembuatan kue rumahan">
             </div>
 
             <div class="about-text">
 
-                <p class="eyebrow">OUR STORY</p>
+                <p class="eyebrow">CERITA KAMI</p>
 
                 <h2>
-                    A Little Sweetness
-                    Makes Life Better.
+                    Sedikit Sentuhan Manis Membuat Hidup Lebih Indah
                 </h2>
 
                 <p>
-                    Crumble & Co. adalah bisnis bakery rumahan
-                    yang menghadirkan berbagai pilihan cookies,
-                    brownies, dan camilan homemade.
+                    Crumble & Co. adalah usaha toko kue rumahan
+                    yang menghadirkan berbagai pilihan kukis,
+                    brownies, dan camilan rumahan.
                 </p>
 
                 <p>
@@ -126,17 +123,17 @@
                 <div class="values">
                     <div>
                         <h3>01</h3>
-                        <p>Quality Ingredients</p>
+                        <p>Bahan Berkualitas</p>
                     </div>
 
                     <div>
                         <h3>02</h3>
-                        <p>Freshly Made</p>
+                        <p>Dibuat Segar</p>
                     </div>
 
                     <div>
                         <h3>03</h3>
-                        <p>Made With Care</p>
+                        <p>Dibuat Sepenuh Hati</p>
                     </div>
                 </div>
 
@@ -153,9 +150,9 @@
         <div class="container">
 
             <div class="section-heading">
-                <p class="eyebrow">OUR FAVORITES</p>
-                <h2>Discover Our Products</h2>
-                <p>Homemade treats made to brighten your day.</p>
+                <p class="eyebrow">PILIHAN FAVORIT</p>
+                <h2>Temukan Produk Kami</h2>
+                <p>Camilan rumahan untuk membuat hari Anda lebih istimewa.</p>
             </div>
 
             <!-- PRODUCT FILTER -->
@@ -173,22 +170,22 @@
                 </button>
 
                 <button class="filter-btn" data-filter="pastry">
-                    Pastry & Snacks
+                    Pastri & Camilan
                 </button>
             </div>
 
             <div class="product-grid">
 
                 <article class="product-card" data-category="cookies">
-                    <img loading="lazy" src="images/cookies.jpeg" alt="Choco Chip Cookies">
+                    <img loading="lazy" src="images/cookies.jpeg" alt="Kukis Cokelat">
 
                     <div class="product-info">
-                        <span class="product-category">COOKIES</span>
-                        <h3>Choco Chip Cookies</h3>
-                        <p>Cookies renyah dengan potongan cokelat.</p>
+                        <span class="product-category">KUKIS</span>
+                        <h3>Kukis Cokelat</h3>
+                        <p>Kukis renyah dengan potongan cokelat lezat.</p>
                         <div class="product-bottom">
                             <strong>Rp25.000</strong>
-                            <button class="order-btn" data-product="Choco Chip Cookies">
+                            <button class="order-btn" data-product="Kukis Cokelat">
                                 Pesan
                             </button>
                         </div>
@@ -196,15 +193,15 @@
                 </article>
 
                 <article class="product-card" data-category="brownies">
-                    <img loading="lazy" src="images/brownies.jpeg" alt="Fudgy Brownies Bites">
+                    <img loading="lazy" src="images/brownies.jpeg" alt="Potongan Brownies Lembut">
 
                     <div class="product-info">
                         <span class="product-category">BROWNIES</span>
-                        <h3>Fudgy Brownies Bites</h3>
-                        <p>Brownies lembut dengan cokelat pekat.</p>
+                        <h3>Potongan Brownies Lembut</h3>
+                        <p>Brownies lembut dengan rasa cokelat pekat.</p>
                         <div class="product-bottom">
                             <strong>Rp30.000</strong>
-                            <button class="order-btn" data-product="Fudgy Brownies Bites">
+                            <button class="order-btn" data-product="Potongan Brownies Lembut">
                                 Pesan
                             </button>
                         </div>
@@ -212,15 +209,15 @@
                 </article>
 
                 <article class="product-card" data-category="cookies">
-                    <img loading="lazy" src="images/nastar.jpeg" alt="Premium Nastar">
+                    <img loading="lazy" src="images/nastar.jpeg" alt="Nastar Premium">
 
                     <div class="product-info">
-                        <span class="product-category">COOKIES</span>
-                        <h3>Premium Nastar</h3>
-                        <p>Nastar lembut dengan isian nanas.</p>
+                        <span class="product-category">KUKIS</span>
+                        <h3>Nastar Premium</h3>
+                        <p>Nastar lembut dengan selai nanas.</p>
                         <div class="product-bottom">
                             <strong>Rp35.000</strong>
-                            <button class="order-btn" data-product="Premium Nastar">
+                            <button class="order-btn" data-product="Nastar Premium">
                                 Pesan
                             </button>
                         </div>
@@ -228,15 +225,15 @@
                 </article>
 
                 <article class="product-card" data-category="pastry">
-                    <img loading="lazy" src="images/cheese-stick.jpeg" alt="Crispy Cheese Stick">
+                    <img loading="lazy" src="images/cheese-stick.jpeg" alt="Stik Keju Renyah">
 
                     <div class="product-info">
-                        <span class="product-category">SNACKS</span>
-                        <h3>Crispy Cheese Stick</h3>
-                        <p>Camilan gurih dan renyah dengan rasa keju.</p>
+                        <span class="product-category">CAMILAN</span>
+                        <h3>Stik Keju Renyah</h3>
+                        <p>Camilan gurih dan renyah dengan cita rasa keju.</p>
                         <div class="product-bottom">
                             <strong>Rp20.000</strong>
-                            <button class="order-btn" data-product="Crispy Cheese Stick">
+                            <button class="order-btn" data-product="Stik Keju Renyah">
                                 Pesan
                             </button>
                         </div>
@@ -244,15 +241,15 @@
                 </article>
 
                 <article class="product-card" data-category="pastry">
-                    <img loading="lazy" src="images/palmier.jpeg" alt="Sweet Palmier">
+                    <img loading="lazy" src="images/palmier.jpeg" alt="Palmier Manis">
 
                     <div class="product-info">
-                        <span class="product-category">PASTRY</span>
-                        <h3>Sweet Palmier</h3>
-                        <p>Pastry renyah dengan lapisan gula karamel.</p>
+                        <span class="product-category">PASTRI</span>
+                        <h3>Palmier Manis</h3>
+                        <p>Pastri renyah berlapis gula karamel.</p>
                         <div class="product-bottom">
                             <strong>Rp22.000</strong>
-                            <button class="order-btn" data-product="Sweet Palmier">
+                            <button class="order-btn" data-product="Palmier Manis">
                                 Pesan
                             </button>
                         </div>
@@ -271,9 +268,9 @@
 
         <div class="container preorder-content">
 
-            <p class="eyebrow">MADE FRESH FOR YOU</p>
+            <p class="eyebrow">DIBUAT SEGAR UNTUK ANDA</p>
 
-            <h2>Good Things Take Time.</h2>
+            <h2>Kelezatan Membutuhkan Waktu</h2>
 
             <p>
                 Semua produk dibuat berdasarkan pesanan.
@@ -282,7 +279,7 @@
             </p>
 
             <a href="#contact" class="btn btn-primary">
-                How To Order
+                Cara Memesan
             </a>
 
         </div>
@@ -296,16 +293,16 @@
         <div class="container">
 
             <div class="section-heading">
-                <p class="eyebrow">OUR GALLERY</p>
-                <h2>Sweet Moments</h2>
-                <p>A glimpse of our homemade bakery creations.</p>
+                <p class="eyebrow">GALERI KAMI</p>
+                <h2>Momen Manis</h2>
+                <p>Intip aneka kue dan camilan rumahan buatan kami.</p>
             </div>
 
             <div class="gallery-grid">
-                <img loading="lazy" src="images/gallery-1.jpg" alt="Cookies bakery">
-                <img loading="lazy" src="images/gallery-2.jpg" alt="Brownies bakery">
-                <img loading="lazy" src="images/gallery-3.jpg" alt="Bakery packaging">
-                <img loading="lazy" src="images/gallery-4.jpg" alt="Freshly baked pastry">
+                <img loading="lazy" src="images/gallery-1.jpg" alt="Kukis buatan Crumble & Co.">
+                <img loading="lazy" src="images/gallery-2.jpg" alt="Brownies buatan Crumble & Co.">
+                <img loading="lazy" src="images/gallery-3.jpg" alt="Kemasan produk Crumble & Co.">
+                <img loading="lazy" src="images/gallery-4.jpg" alt="Pastri yang baru dipanggang">
             </div>
 
         </div>
@@ -319,44 +316,42 @@
         <div class="container">
 
             <div class="section-heading">
-                <p class="eyebrow">GET IN TOUCH</p>
-                <h2>Let's Make Your Day Sweeter.</h2>
+                <p class="eyebrow">HUBUNGI KAMI</p>
+                <h2>Mari Buat Hari Anda Lebih Manis</h2>
                 <p>Hubungi kami untuk informasi dan pemesanan.</p>
             </div>
 
             <div class="contact-grid">
 
                 <div class="contact-card">
-                    <h3>Location</h3>
-                    <p>Tangerang, Banten, Indonesia</p>
+                    <h3>Lokasi</h3>
+                    <p>Citra Raya Taman Puspa Cikupa, Tangerang, Banten, Indonesia</p> <a
+    href="https://maps.app.goo.gl/UQGgXvtpf5DzXRyDA"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn maps-btn">
+    📍 Lihat Lokasi Kami
+</a>
                 </div>
 
                 <div class="contact-card">
-                    <h3>Order System</h3>
-                    <p>Pre-Order / Made to Order</p>
+                    <h3>Sistem Pemesanan</h3>
+                    <p>Pesan di Muka / Dibuat Sesuai Pesanan</p>
                 </div>
 
                 <div class="contact-card">
-                    <h3>Operating Hours</h3>
-                    <p>Senin–Sabtu, 09.00–17.00 WIB</p>
+                    <h3>Jam Operasional</h3>
+                    <p>Senin–Sabtu, 08.00–17.30 WIB</p>
                 </div>
 
             </div>
 
-            <div class="contact-buttons"> <a href="https://wa.me/6283877660960"
-   class="btn btn-primary"
-   target="_blank"
-   rel="noopener noreferrer">
-    Pesan via WhatsApp
-</a>
+            <div class="contact-buttons">
                 <a href="#products" class="btn btn-primary">Pilih Produk untuk Dipesan</a>
-                <a href="#" id="tiktok-link" class="btn btn-primary">
-                    Visit Our TikTok Shop
+                <a href="https://www.tiktok.com/@crumbleco01?_r=1&_t=ZS-9Be53k1Dmfm" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    Kunjungi Toko TikTok Kami
                 </a>
 
-                <a href="#" id="instagram-link" class="btn btn-outline">
-                    Instagram
-                </a>
             </div>
 
         </div>
@@ -372,13 +367,13 @@
         <div class="container footer-content">
 
             <a href="#home" class="logo">
-                CRUMBLE <span>& CO.</span>
+                <img src="images/logo-crumble.png" alt="Logo Crumble &amp; Co.">
             </a>
 
-            <p>Freshly Baked, Happiness in Every Bite.</p>
+            <p>Dipanggang Segar, Happiness di Setiap Gigitan.</p>
 
             <p class="copyright">
-                © 2026 Crumble & Co. All Rights Reserved.
+                © 2026 Crumble & Co. Hak Cipta Dilindungi.
             </p>
 
         </div>

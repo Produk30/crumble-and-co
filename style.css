@@ -36,16 +36,35 @@ section { padding: 88px 0; }
   background: rgba(255,250,243,.96); backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(104,69,47,.12);
 }
-.navbar { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo {
-  flex-shrink: 0; font-family: "Playfair Display", Georgia, serif;
-  font-size: 26px; font-weight: 700; letter-spacing: .6px; color: var(--brown);
+.navbar {
+  min-height: 96px;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+}
+/* The image is the only brand mark in the header; do not add a second text wordmark. */
+.navbar > .logo {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  width: 190px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.navbar > .logo img {
+  display: block;
+  width: 100%;
+  height: 82px;
+  object-fit: contain;
+  object-position: left center;
 }
 .logo span { color: var(--caramel); }
-.nav-menu { display: flex; align-items: center; gap: 30px; list-style: none; }
+.nav-menu { display: flex; align-items: center; justify-content: center; gap: clamp(16px, 2.2vw, 30px); list-style: none; }
 .nav-menu a { font-size: 14px; font-weight: 600; color: #665347; transition: color .2s; }
 .nav-menu a:hover, .nav-menu a:focus-visible { color: var(--caramel); }
 .nav-button {
+  justify-self: end; white-space: nowrap;
   padding: 11px 18px; border-radius: 4px; background: var(--brown);
   color: var(--white); font-size: 13px; font-weight: 700;
 }
@@ -83,7 +102,17 @@ section { padding: 88px 0; }
 .btn:hover { transform: translateY(-2px); }
 .btn-primary { background: var(--caramel); color: var(--white); }
 .btn-primary:hover { background: var(--brown); }
-.btn-outline { border-color: #d7b99e; color: var(--white); background: transparent; }
+.btn-outline {
+    background-color: #A8754F;
+    border: 1px solid #A8754F;
+    color: #FFFFFF;
+}
+
+.btn-outline:hover {
+    background-color: #805638;
+    border-color: #805638;
+    color: #FFFFFF;
+}
 .btn-outline:hover { background: var(--white); color: var(--brown); }
 
 .about { background: var(--cream); }
@@ -156,7 +185,11 @@ section { padding: 88px 0; }
 .footer p { color: #d9c3b1; font-size: 12px; margin-top: 5px; }
 
 @media (max-width: 900px) {
-  .nav-menu { gap: 16px; }
+  .navbar { grid-template-columns: 155px minmax(0, 1fr) auto; gap: 16px; }
+  .navbar > .logo { width: 155px; }
+  .navbar > .logo img { height: 72px; }
+  .nav-menu { gap: 14px; }
+  .nav-menu a { font-size: 13px; }
   .nav-button { display: none; }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   .about-content { gap: 35px; }
@@ -164,11 +197,18 @@ section { padding: 88px 0; }
 }
 @media (max-width: 650px) {
   section { padding: 65px 0; }
-  .navbar { min-height: 70px; }
-  .logo { font-size: 23px; }
-  .menu-toggle { display: inline-flex; }
+  .navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .navbar > .logo { width: 145px; }
+  .navbar > .logo img { height: 66px; }
+  .nav-button { display: none; }
+  .menu-toggle { display: inline-flex; margin-left: auto; }
   .nav-menu {
-    display: none; position: absolute; top: 70px; left: 0; width: 100%;
+    display: none; position: absolute; top: 76px; left: 0; width: 100%;
     padding: 20px 5%; flex-direction: column; align-items: flex-start; gap: 16px;
     background: var(--cream); border-bottom: 1px solid var(--sand);
   }
@@ -195,4 +235,16 @@ section { padding: 88px 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+
+/* Brand image sizing */
+.footer .logo {
+  width: 160px;
+  margin: 0 auto 8px;
+}
+.footer .logo img {
+  width: 100%;
+  height: 70px;
+  object-fit: contain;
 }
